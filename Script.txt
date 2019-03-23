@@ -1,0 +1,353 @@
+
+-------------------------INSERT DATA-----------------------------
+-------------------------------------------------------------------Using the same account of Initial Creation---------------------
+
+ALTER TRIGGER SECURE_EMPLOYEES DISABLE;
+
+REM **** Regions
+INSERT INTO REGIONS VALUES ('1', 'Asia');
+INSERT INTO REGIONS VALUES ('2', 'Europe');
+INSERT INTO REGIONS VALUES ('3', 'America');
+INSERT INTO REGIONS VALUES ('4', 'Oceania');
+INSERT INTO REGIONS VALUES ('5', 'Africa');
+
+REM **** COUNTRIES
+INSERT INTO COUNTRIES VALUES ('01', 'Vietnam', 1);
+INSERT INTO COUNTRIES VALUES ('02', 'France', 2);
+INSERT INTO COUNTRIES VALUES ('03', 'USA', 3);
+INSERT INTO COUNTRIES VALUES ('04', 'Australia', 4);
+INSERT INTO COUNTRIES VALUES ('05', 'Africa', 5);
+
+REM **** LOCATIONS
+INSERT INTO LOCATIONS VALUES (11, '69 Ly Thuong Kiet', 'PC11', 'Ho Chi Minh', NULL, '01');
+INSERT INTO LOCATIONS VALUES (12, '28 Saint German', 'PC12', 'Paris', NULL, '02');
+INSERT INTO LOCATIONS VALUES (13, '11 New Time', 'PC13', 'New Yorks', NULL, '03');
+INSERT INTO LOCATIONS VALUES (15, '69 Queensland', 'PC15', 'Brisbane', NULL, '04');
+INSERT INTO LOCATIONS VALUES (14, '96 Kawakami', 'PC14', 'Tokyo', NULL, '05');
+
+REM **** JOBS
+INSERT INTO JOBS VALUES ('J01', 'Coach', 50000, 99000);
+INSERT INTO JOBS VALUES ('J02', 'Player', 5000, 90000);
+INSERT INTO JOBS VALUES ('J03', 'Substitude', 5000, 90000);
+INSERT INTO JOBS VALUES ('J04', 'Doctor', 5000, 90000);
+INSERT INTO JOBS VALUES ('J05', 'Nurse', 5000, 90000);
+
+REM **** DEPARTMENTS
+INSERT INTO DEPARTMENTS VALUES (21, 'Gigabyte Marines', NULL, 11);
+INSERT INTO DEPARTMENTS VALUES (26, 'BK Computer Science', NULL, 11);
+INSERT INTO DEPARTMENTS VALUES (22, 'SK Telecom', NULL, 12);
+INSERT INTO DEPARTMENTS VALUES (23, 'Team Solo Mid', NULL, 13);
+INSERT INTO DEPARTMENTS VALUES (24, 'G2 Esport', NULL, 14);
+INSERT INTO DEPARTMENTS VALUES (25, 'Flash Woft', NULL, 15);
+
+REM **** EMPLOYEES
+INSERT INTO EMPLOYEES VALUES (10000, 'Nam', 'Justice', 'justice@lol.com', '600555006', to_date('03-03-2013', 'dd-mm-yyyy'), 'J01', '90000', NULL, NULL, 26);
+INSERT INTO EMPLOYEES VALUES (10001, 'Vu', 'Wagon', 'wagon@lol.com', '700555007', to_date('03-03-2013', 'dd-mm-yyyy'), 'J02', '50000', NULL, 100, 26);
+INSERT INTO EMPLOYEES VALUES (10002, 'Quan', 'Gay', 'wangay@lol.com', '800555008', to_date('03-03-2013', 'dd-mm-yyyy'), 'J02', '50000', NULL, 100, 26);
+INSERT INTO EMPLOYEES VALUES (10003, 'Li', 'Vai', 'levi@lol.com', '100555001', to_date('03-03-2013', 'dd-mm-yyyy'), 'J01', '70000', NULL, NULL, 21);
+INSERT INTO EMPLOYEES VALUES (10004, 'Octi', 'Must', 'optimus@lol.com', '110555011', to_date('04-04-2014', 'dd-mm-yyyy'), 'J02', '30000', NULL, 103, 21);
+INSERT INTO EMPLOYEES VALUES (10005, 'Kho', 'Mau', 'kkoma@lol.com', '200555002', to_date('04-04-2014', 'dd-mm-yyyy'), 'J01', '98000', NULL, NULL, 22);
+INSERT INTO EMPLOYEES VALUES (10006, 'Fack', 'Ker', 'faker@lol.com', '220555022', to_date('04-04-2014', 'dd-mm-yyyy'), 'J02', '60000', NULL, 105, 22);
+INSERT INTO EMPLOYEES VALUES (10007, 'Pea', 'Nude', 'peanut@lol.com', '222555222', to_date('05-05-2015', 'dd-mm-yyyy'), 'J02', '60000', NULL, 105, 22);
+INSERT INTO EMPLOYEES VALUES (10008, 'Biet', 'Send', 'bjergsen@lol.com', '300555003', to_date('05-05-2015', 'dd-mm-yyyy'), 'J01', '70000', NULL, NULL, 23);
+INSERT INTO EMPLOYEES VALUES (10009, 'Rua', 'Hoang', 'wildturtle@lol.com', '330555033', to_date('06-06-2016', 'dd-mm-yyyy'), 'J03', '10000', NULL, 108, 23);
+INSERT INTO EMPLOYEES VALUES (10010, 'Linh', 'ML', 'lml@lol.com', '400555004', to_date('06-06-2016', 'dd-mm-yyyy'), 'J01', '80000', NULL, NULL, 24);
+INSERT INTO EMPLOYEES VALUES (10011, 'Miss', 'Thy', 'mitthy@lol.com', '440555044', to_date('05-05-2017', 'dd-mm-yyyy'), 'J03', '30000', NULL, 110, 24);
+INSERT INTO EMPLOYEES VALUES (10012, 'Can', 'Sa', 'karsa@lol.com', '500555005', to_date('05-05-2017', 'dd-mm-yyyy'), 'J01', '60000', NULL, NULL, 25);
+
+REM *** JOB_HISTORY
+INSERT INTO JOB_HISTORY VALUES ('10000', to_date('03-03-2013', 'dd-mm-yyyy'), to_date('03-03-2014', 'dd-mm-yyyy'), 'J01', 21);
+INSERT INTO JOB_HISTORY VALUES ('10000', to_date('03-03-2014', 'dd-mm-yyyy'), to_date('03-03-2017', 'dd-mm-yyyy'), 'J02', 21);
+INSERT INTO JOB_HISTORY VALUES ('10000', to_date('03-03-2017', 'dd-mm-yyyy'), to_date('04-04-2017', 'dd-mm-yyyy'), 'J01', 22);
+INSERT INTO JOB_HISTORY VALUES ('10000', to_date('04-04-2017', 'dd-mm-yyyy'), to_date('05-05-2017', 'dd-mm-yyyy'), 'J01', 22);
+
+INSERT INTO JOB_HISTORY VALUES ('10001', to_date('03-03-2013', 'dd-mm-yyyy'), to_date('04-04-2014', 'dd-mm-yyyy'), 'J01', 22);
+INSERT INTO JOB_HISTORY VALUES ('10001', to_date('04-04-2014', 'dd-mm-yyyy'), to_date('05-05-2017', 'dd-mm-yyyy'), 'J01', 22);
+
+INSERT INTO JOB_HISTORY VALUES ('10002', to_date('03-03-2017', 'dd-mm-yyyy'), to_date('05-05-2017', 'dd-mm-yyyy'), 'J01', 22);
+
+ALTER TRIGGER SECURE_EMPLOYEES ENABLE;
+
+COMMIT;
+
+
+-------------------------SECTION 1 : DML Commands-----------------------------
+
+--1 B
+SELECT		countries.country_id, countries.country_name, count(*)
+FROM 		departments, locations, countries
+WHERE 		departments.location_id = locations.location_id and
+		locations.country_id = countries.country_id --
+GROUP BY	countries.country_id, countries.country_name;
+
+--1 C.1 -- For each job
+SELECT 		departments.department_name, count(*)
+FROM		employees, jobs, departments
+WHERE 		employees.department_id = departments.department_id and
+ 		employees.job_id = jobs.job_id
+GROUP BY	departments.department_name;
+
+--1 C.2 -- For each department
+SELECT 		jobs.job_title, count(*)
+FROM 		employees, jobs, departments
+WHERE		employees.department_id = departments.department_id and
+ 		employees.job_id = jobs.job_id
+GROUP BY	jobs.job_title;
+
+--1 D
+SELECT 		distinct jobs.job_title,
+		employees.first_name, employees.email,
+		job_history.start_date, job_history.end_date
+FROM 		employees, jobs, job_history
+WHERE		employees.job_id = jobs.job_id and
+		employees.employee_id = job_history.employee_id;
+     
+--1 E
+CREATE TABLE	 new_table AS
+SELECT		 job_history.employee_id, count(*) AS NumOJ
+FROM 		 job_history
+WHERE 		 extract(year from job_history.start_date) = 2017 or
+		 extract(year from job_history.end_date) = 2017
+GROUP BY	 job_history.employee_id
+HAVING		 count(*)>=2
+CREATE     	 table new_table1 as
+SELECT		 employees.employee_id, employees.first_name, employees.email,
+		 employees.phone_number
+FROM		 employees, job_history, departments, locations, countries
+WHERE		 employees.employee_id = job_history.employee_id AND
+		 employees.department_id = departments.department_id AND
+		 departments.location_id = locations.location_id AND
+		 locations.country_id = countries.country_id AND
+ 		 countries.country_name = 'Vietnam'
+SELECT 		 distinct *
+FROM 		 new_table, new_table1
+WHERE 		 new_table.employee_id = new_table1.employee_id
+
+
+-------------------------SECTION 2 :DDL Commands-------------------------------
+
+--2 A.Alter the table JOB_HISTORY to add a new column SALARY for keeping track of
+salary information of old jobs :
+
+ALTER TABLE job_history
+add J_SALARY int
+default(1);
+
+CREATE OR REPLACE TRIGGER update_job_history
+AFTER UPDATE OF job_id, department_id, salary ON employees
+FOR EACH ROW
+BEGIN
+	add_job_history(:old.employee_id, :old.hire_date, sysdate,
+	:old.job_id, :old.department_id, :old.salary);
+END;
+
+--2 A.Alter the trigger of UPDATE_JOB_HISTORY and the procedure
+add_job_history for the above changes  :
+
+CREATE OR REPLACE PROCEDURE add_job_history
+(
+	eid   job_history.employee_id%type,
+	sd    job_history.start_date%type,
+	ed    job_history.end_date%type,
+	jid   job_history.job_id%type,
+	did   job_history.department_id%type
+)
+AS
+BEGIN
+	INSERT INTO job_history (employee_id, start_date, end_date,
+                           job_id, department_id)
+	values(eid, sd, ed, jid, did);
+END add_job_history;
+-- Testcase :
+INSERT INTO job_history 
+VALUES(10017, to_date('01-01-2017', 'dd-mm-yyyy'), to_date('01-02-2017', 'dd-mm-yyyy'), 'J01', 21, 100);
+
+
+--2 B
+CREATE OR REPLACE TRIGGER CHECK_SALARY
+BEFORE INSERT OR UPDATE OF SALARY, JOB_ID ON EMPLOYEES
+FOR EACH ROW
+ENABLE
+DECLARE
+	MIN_VALUE NUMBER;
+	MAX_VALUE NUMBER;
+BEGIN
+	SELECT MIN_SALARY, MAX_SALARY INTO MIN_VALUE, MAX_VALUE
+	FROM JOBS
+	WHERE JOBS.JOB_ID = :NEW.JOB_ID;
+
+	IF (:NEW.SALARY < MIN_VALUE OR :NEW.SALARY > MAX_VALUE) THEN
+		RAISE_APPLICATION_ERROR(-20001, 'The salary is over-range of min salary and max salary of the job');
+	END IF;
+END;
+
+--Testcases 2 B
+INSERT INTO EMPLOYEES VALUES (10013, 'Can1', 'Sa1', 'karsa1@lol.com', '550555055', to_date('01-01-2017', 'dd-mm-yyyy'), 'J01', '6000', NULL, NULL, 25);
+--EXPECT: ERROR
+
+UPDATE EMPLOYEES
+SET SALARY = '1000'
+WHERE EMPLOYEE_ID = '10012';
+--EXPECT: ERROR
+
+UPDATE EMPLOYEES
+SET JOB_ID = 'J01'
+WHERE EMPLOYEE_ID = '10009';
+--EXPECT: ERROR
+
+UPDATE EMPLOYEES
+SET JOB_ID = 'J02'
+WHERE EMPLOYEE_ID = '10000';
+--EXPECT: NO ERROR
+
+COMMIT;
+
+
+-----------------------SECTION 3 : DCL Commands------------------------------
+
+----Do with SYS/SYSTEM/SYSDBA---
+
+----Create user CEO
+CREATE USER C##CEO IDENTIFIED BY Hungvuong12 -- password=Hungvuong12
+DEFAULT TABLESPACE users TEMPORARY TABLESPACE temp
+QUOTA 20M ON users
+ACCOUNT UNLOCK;
+----
+SELECT username,account_status,default_tablespace,temporary_tablespace
+profile,authentication_type FROM DBA_USERS WHERE username ='C##CEO';
+----Login and create sesstion
+grant create session to C##CEO;
+----Basic permission
+grant create table to C##CEO;
+grant create trigger to C##CEO;
+grant create sequence to C##CEO;
+GRANT CREATE VIEW TO C##CEO;
+
+----Back to the Initial user account
+----3a)
+GRANT SELECT,INSERT,UPDATE,DELETE
+ON EMPLOYEES
+TO C##CEO;
+----
+GRANT SELECT,INSERT,UPDATE,DELETE
+ON DEPARTMENTS
+TO C##CEO;
+----
+GRANT SELECT,INSERT,UPDATE,DELETE
+ON COUNTRIES
+TO C##CEO;
+----
+GRANT SELECT,INSERT,UPDATE,DELETE
+ON JOBS
+TO C##CEO;
+----
+GRANT SELECT,INSERT,UPDATE,DELETE
+ON LOCATIONS
+TO C##CEO;
+----
+GRANT SELECT,INSERT,UPDATE,DELETE
+ON REGIONS
+TO C##CEO;
+
+COMMIT;
+--------------
+
+----Do with SYS/SYSTEM/SYSDBA---
+----Create User HRManager
+CREATE USER C##HRManager IDENTIFIED BY Hungvuong12 -- password = Hungvuong12
+DEFAULT TABLESPACE users TEMPORARY TABLESPACE temp
+QUOTA 20M ON users
+ACCOUNT UNLOCK;
+----
+SELECT username,account_status,default_tablespace,temporary_tablespace
+profile,authentication_type FROM DBA_USERS WHERE username ='C##HRManager';
+----Login and create sesstion
+grant create session to C##HRManager;
+----Basic permission
+grant create table to C##HRManager;
+grant create trigger to C##HRManager;
+grant create sequence to C##HRManager;
+GRANT CREATE VIEW TO C##HRManager;
+
+COMMIT;
+
+----Back to the Initial user account
+----Grant View for all schemas
+---
+GRANT SELECT
+ON EMPLOYEES
+TO C##HRManager;
+---
+GRANT SELECT
+ON DEPARTMENTS
+TO C##HRManager;
+---
+GRANT SELECT
+ON COUNTRIES
+TO C##HRManager;
+---
+GRANT SELECT
+ON JOBS
+TO C##HRManager;
+---
+GRANT SELECT
+ON LOCATIONS
+TO C##HRManager;
+---
+GRANT SELECT
+ON EMPLOYEES
+TO C##HRManager;
+---
+GRANT SELECT
+ON REGIONS
+TO C##HRManager;
+---
+GRANT SELECT
+ON JOB_HISTORY
+TO C##HRManager;
+
+---Insert and Update table EMPLOYEES ,but can't Insert and Update the field COMMISSION_PCT
+---1
+GRANT UPDATE,INSERT (EMPLOYEE_ID)
+ON EMPLOYEES
+TO C##HRManager;
+---2
+GRANT UPDATE,INSERT (FIRST_NAME)
+ON EMPLOYEES
+TO C##HRManager;
+---3
+GRANT UPDATE,INSERT (LAST_NAME)
+ON EMPLOYEES
+TO C##HRManager;
+---4
+GRANT UPDATE,INSERT (EMAIL)
+ON EMPLOYEES
+TO C##HRManager;
+---5
+GRANT UPDATE,INSERT (PHONE_NUMBER)
+ON EMPLOYEES
+TO C##HRManager;
+---6
+GRANT UPDATE,INSERT (HIRE_DATE)
+ON EMPLOYEES
+TO C##HRManager;
+---7
+GRANT UPDATE,INSERT (JOB_ID)
+ON EMPLOYEES
+TO C##HRManager;
+---8
+GRANT UPDATE,INSERT (SALARY)
+ON EMPLOYEES
+TO C##HRManager;
+---9
+GRANT UPDATE,INSERT (MANAGER_ID)
+ON EMPLOYEES
+TO C##HRManager;
+---10
+GRANT UPDATE,INSERT (DEPARTMENT_ID)
+ON EMPLOYEES
+TO C##HRManager;
+
+COMMIT;
+
+------------------------------END--------------------------------

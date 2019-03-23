@@ -1,0 +1,12 @@
+Hello, teacher.
+
+Today I am going to show you how to use Database application
+
+When you open application, what you will see is User's Interface.
+In order to modify data, you have to pass Username and Password correctly, "C##VU" and "duonghoanvu" respectively.
+Then it shows you other theme. There, you can Insert, Update, Delete data.
+Furthermore if you need to retrieve a particular item, you could pass its name or ID into bar above large table in the middle of page.
+
+Hopefully you enjoy our application
+
+
